@@ -1,0 +1,324 @@
+library(swirl)swirl()
+5+7
+x <- 5 + 7
+x
+y
+x-3
+<-x-3
+x-3
+y<-x-3
+y
+c(1.1,9,3.14)
+(1.1, 9, 3.14)
+z <- c(1.1, 9, 3.14)
+?c
+z
+c(555 z)
+c(z, 555)
+c(z, 555, z)
+z * 2 + 100
+my_sqrt
+my_sqrt(z-1)
+z-1
+sqrt(z-1)
+info()
+sqrt(z-1)
+sqrt(my_sqrt-1)
+c(my_sqrt)
+skip()
+my_sqrt
+my_div
+skip()
+my_div
+C(1,2,3,4)+c(0,10)
+c(1,2,3,4)+ c(0,10)
+c(1, 2, 3, 4) + c(0, 10, 100)
+z * 2 + 1000
+my_div
+setwd('~/Desktop/Evolution/Tasks/Task.02')
+Datal<- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)
+Data2<- read.csv ('http://jonsmitchell.com/data/cyrus.csv', stringsAsFactors=F)
+write.csv(Data1, 'rawdata.csv', quote=F)
+dayID <- apply(Data1, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply (dayID, as.Date, format = "%Y-%m-%d", origin ="2019-04-18")
+setwd('~/Desktop/Evolution/Tasks/Task.02')
+Data1<- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)
+write.csv(Data1, 'rawdata.csv', quote=F)
+dayID <- apply(Data1, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply (dayID, as.Date, format = "%Y-%m-%d", origin ="2019-04-18")
+Data1$age <-dateID-dateID[which (Data$event == 'birth')]
+Data1$age <-dateID-dateID[which (Data1$event == 'birth')]
+beren2 <- Data1
+beren3 <- beren2 [order (beren2$age),]
+mean()
+Feeds <- which(beren3$event == "bottle")
+avgMilk <- mean(beren3$value [Feeds])
+avgFeed <- tapply (beren3$value [Feeds], beren3$age [Feeds], mean)
+varFeed <- tapply (beren3$value [Feeds], beren3$age [Feeds], var)
+totalFeed <- tapply (beren3$value [Feeds], beren3$age [Feeds], sum)
+numFeeds <- tapply (beren3$value [Feeds], beren3$age [Feeds], length)
+cor(berren3$value [Feeds], beren3$age[Feeds])
+cor(beren3$value [Feeds], beren3$age[Feeds])
+cor.test (beren3$value [Feeds], beren3$age[Feeds])
+berenCor<- cor.test (beren3$value [Feeds], beren3$age [Feeds])
+summary(berenCor)
+berenANOVA <- aov(beren3$value [Feeds]~ beren3$caregiver [Feeds])
+boxplot( beren3$value [Feeds]~ beren3$caregiver[Feeds], xlab= "who gave the bottle", ylab = "amount of milk consumed (oz)")
+par(las=1, mar=c(5,5,1,1), mgp=c(2,0.5,0), tck=-0.01)
+par(las=1, mar=c(5,5,1,1), mgp=c(2,0.5,0), tck=-0.01)
+plot(as. numeric(names(totalFeed))
+plot(as. numeric(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")
+plot(as.numeric(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")
+abline(h=mean(totalFeed), lty=2, col='red')
+abline(h=mean(totalFeed), lty=2, col="red")
+pdf("r02b-totalMilkByDay.pdf", height=4, width=4)
+par(las=1, mar=c(5,5,1,1), mgp=c(2,0.5,0), tck=-0.01)
+plot(as.numberic(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")
+plot(as.numeric(names(totalFeed)), totalFeed, type="b", pch=16, xlab="age in days", ylab="ounces of milk")
+abline(h=mean(totalFeed), lty=2, col='red')
+dev. off()
+dev.off()
+source("http://jonmitchell.com/code/plotFxn02b.R")
+source("http://jonsmitchell.com/code/plotFxn02b.R")
+pdf("r02b-cumulativeMilkByTime.pdf")
+Data2 <- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)#
+write.csv(Data2, 'rawdata.csv', quote=F)#
+head(Data2)#
+GlargleBrgle <- Data2#
+head(GlargleBrgle)#
+length(Data2)#
+nrow(Data2)#
+ncol(Data2)#
+colnames(Data2)#
+head(Data2)#
+Data2[1,]#
+Data2[2,]#
+Data2[1:3,]#
+Data2[1:3, 4]#
+Data2[1:5, 1:3]#
+Mass<-which(Data2 [,9]== 'trait_mass')#
+Cyrus <- Data2[Mass,]#
+Mass <- which(Data2[,'event']=='trait_mass')#
+Mass <- which(Data2$'event'=='trait_mass')#
+dayID <- apply(Data2, 1, function(x) paste(x[1:3], collapse='-'))#
+dayID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2022-04-12")#
+dateID <- sapply(dayID, as.Date, format= "%Y-%m-%d", origin = "2022-04-12")#
+Data2$age <- dateID - dateID[which(Data2$event=='birth')]#
+head(Data2)#
+Cyrus2<-Data2#
+Cyrus3 <- Cyrus2[order(Cyrus2$age),]#
+write.csv(Cyrus3, 'cyrus_new.csv', quote=F, row.names=FALSE)#
+Mass <- which(Cyrus3$event=="trait_mass")#
+avgMilk <- mean(Cyrus3$value[Mass])#
+avgMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Mass], mean)#
+varMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Mass], var)#
+totalMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Mass], sum)#
+numMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Mass], length)#
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalMass)))#
+abline(h=mean(totalMass), lty=2, col='red')#
+pdf("r02b-totalMilkByDay.pdf", height = 4, width = 4)#
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalMass)), totalMass, type="b", pch=16, xlab="age in days", ylab="ounces of milk")#
+abline(h=mean(totalMass), lty=2, col='red')
+setwd('C://Users//kthom//Desktop//Task_02')#
+Data1 <- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)#
+Data2 <- read.csv('http://jonsmitchell.com/data/cyrus.csv',stringsAsFactors=F)#
+write.csv(Data1, 'rawdata.csv', quote=F)#
+length(Data1)#
+nrow(Data1)#
+ncol(Data1)#
+colnames(Data1)#
+head(Data1)#
+Data1[1,]#
+Data1[2,]#
+Data1[1:3,]#
+Data1[1:3, 4]#
+Data1[1:5, 1:3]#
+Feeds <-(Data1[,9]=='bottle')#
+berenMilk <- Data1[Feeds,]#
+head(berenMilk)#
+Feeds <- which(Data1$event == 'bottle')#
+Feeds <- which(Data1$event == 'bottle')#
+dayID <- apply(Data1, 1, function(x) paste(x[1:3], collapse='-'))#
+dateID <- sapply (dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data1$age <- dateID - dateID[which(Data1$event == 'birth')]#
+head(Data1)#
+beren2 <- Data1#
+beren3 <- beren2[order(beren2$age),]#
+write.csv(beren3, 'beren_new.csv', quote=F, row.names=FALSE)#
+Feeds <- which(beren3$event == "bottle")#
+avgMilk <- mean(beren3$value[feeds])#
+avgMilk <- mean(beren3$value[Feeds])#
+avgFeed <- tapply(beren3$value[Feeds],beren3$age[Feeds]mean)#
+avgFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], mean)#
+avgFeed#
+varFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], var)#
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)#
+cor(beren3$Value[Feeds], beren3$age[Feeds])#
+cor(beren3$value [Feeds], beren3$age [Feeds])#
+cor.test(beren3$value[Feeds], beren3$age[Feeds])#
+berenCor <- cor.test(beren3$value[Feeds], beren3$age[Feeds])#
+summary(berenCor)#
+berenANOVA <- aov(beren3$value[Feeds], beren3$caregiver[Feeds])#
+berenANOVA <- aov(beren3$value[Feeds]~ beren3$caregiver[Feeds])#
+boxplot( beren3$value[Feeds]~ beren3$caregiver[Feeds], xlab= "who gave the bottle" , ylab = "amount of milk consumed (oz)")#
+par(1as=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalFeed)), totalFeed, type=&quot;b&quot;, pch=16, xlab=&quot;age in days&quot;, ylab=&quot;ounces of milk&quot;)#
+plot(as.numeric(names(totalFeed)), totalFeed , type ="b" , pch=16, xlab=" age in days" , ylab="ounces of milk")#
+abline(h=mean(totalFeed), lty=2, col="red")	 #
+dev.off()
+Data2 <- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)#
+write.csv(Data2, 'rawdata.csv', quote=F)#
+length(Data2)#
+nrow(Data2)#
+ncol(Data2)#
+colnames(Data2)#
+head(Data2)#
+Data2[1,]#
+Data2[2,]#
+Data2[1:3,]#
+Data2[1:3, 4]#
+Data2[1:5, 1:3]
+Data2 <- read.csv('http://jonsmitchell.com/data/beren.csv',stringsAsFactors=F)
+Data2 <- read.csv('http://jonsmitchell.com/data2/beren.csv',stringsAsFactors=F)
+Data2 <- read.csv('http://jonsmitchell.com/data/cyrus.csv',stringsAsFactors=F)
+write.csv(Data2, 'rawdata.csv', quote=F)
+length(Data2)
+nrow(Data2)
+ncol(Data2)
+colnames(Data2)
+head(Data2)
+Data2[1,]
+Data[2,]
+Data2[2,]
+Data2[1:3,4]
+Data2[1:5,1:3]
+Data2[1:5, 1:3]
+Mass <-(Data2[,9]=='trait_mass')
+CyrusMilk <-Data2[Mass,]
+head(CyrusMilk)
+Mass <- which(Data2$event == 'trait_mass')
+dayID <- apply(Data2, 1, function(x) paste(x[1:3], collapse='-'))#
+dateID <- sapply (dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data2$age <- dateID - dateID[which(Data1$event == 'birth')]#
+head(Data2
+head(Data2)
+head(Data2)
+Cyrus2 <- Data2
+cyrus3 <- cyrus2[order(cyrus2$age),]#
+cyrus3 <- cyrus2[order(cyrus2$age),]
+Cyrus3 <- Cyrus2[order(cyrus2$age),]
+Cyrus3 <- Cyrus2[order(Cyrus2$age),]
+write.csv(Cyrus3, 'Cyrus_new.csv', quote=F, row.names=FALSE)
+Mass<- which(Cyrus3$event == "trait_mass")
+avgMilk <- mean(Cyrus3$value[Mass])
+avgMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Mass], mean)
+varMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Mass], var)
+totalMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Feeds], sum)
+totalMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Mass], sum)
+totalMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Mass], sum)
+numMass <- tapply(cyrus3$value[Mass], cyrus3$age[Mass], length)
+numMass <- tapply(Cyrus3$value[Mass], Cyrus3$age[Mass], length)
+cor(Cyrus3$value [Mass], Cyrus3$age [Mass])
+cor.test(Cyrus3$value[Mass], Mass3$age[Mass])
+cor.test(Cyrus3$value[Mass], Cyrus3$age[Mass])
+cyrusCor <- cor.test(Cyrus3$value[Mass], Cyrus3$age[Mass])
+summary(CyrusCor)
+summary(cyrusCor)
+cyrusANOVA <- aov(Cyrus3$value[Mass]~ Cyrus3$caregiver[Mass])
+boxplot( Cyrus3$value[Mass]~ Cyrus3$caregiver[Mass], xlab= "who gave the bottle" , ylab = "amount of milk consumed (oz)")
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
+plot(as.numeric(names(totalMass)), totalMass , type ="b" , pch=16, xlab=" age in days" , ylab="ounces of milk")
+abline(h=mean(totalMass), lty=2, col='red')
+pdf('r02b-totalMilkByDay.pdf', height = 4, width = 4)
+par(las=1, mar=c(5,5,1,1) , mgp=c(2, 0.5, 0), tck=-0.1)
+abline(h=mean(totalMass), lty=2, col='red')
+pdf('r02b-totalMilkByDay.pdf', height = 4, width = 4)
+par(las=1, mar=c(5,5,1,1) , mgp=c(2, 0.5, 0), tck=-0.1)
+abline(h=mean(totalMass), lty=2, col='red')
+abline(h=mean(totalMass), lty=2, col='red')
+abline(h=mean(totalMass), lty=2, col='red')
+plot(as.numberic(names(totalMass)))
+plot(as.numeric(names(totalMass)))
+abline(h=mean(totalMass), lty=2, col='red')
+points(Cyrus3$value[Mass]/1000), Cyrus$age[Mass], pch=16, col='blue')
+dev.off()
+boxplot(Cyrus3$value[Mass]~ Cyrus3$caregiver[Mass], xlab= "who gave the bottle" , ylab = "amount of milk consumed (oz)")
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
+plot(as.numeric(names(totalMass)), totalMass , type ="b" , pch=16, xlab=" age in days" , ylab="ounces of milk")
+boxplot( beren3$value[Feeds]~ beren3$caregiver[Feeds], xlab= "who gave the bottle" , ylab = "amount of milk consumed (oz)")
+source("http://jonsmitchell.com/code/plotFxn02b.R")
+berenMass <-which(Data1$event=='trait_mass')
+cyrusMass <-which(Data2$event=='trait-mass')
+boxplot(beren3$age[berenMass]~ beren3$value[berenMass], xlabs= "age in days", ylabs="mass in kg")
+par(las=1, mar=c(5,5,1,1), mgp=c(2,0.5,0),tck=-0.01)
+plot(beren3$age[berenMass],berenMass, type="b", pch=16, xlabs="age in days", ylabs="mass in kg")
+warnings()
+plot(beren3$age[berenMass],berenMass, type="b", pch=16, xlabs="age in days", ylabs="mass in kg")
+day ID <- apply(Data2,1, function(x) paste(x[1:3],collapse='-'))
+dayID <- apply(Data2,1, function(x) paste(x[1:3],collapse='-'))
+warning()
+dateID <- sapply(dayID, as.Date, format= "%Y-%m-%d", origin= "2019-04-18")
+Data2$age <- dataID -dateID[which(Data2$event == 'birth')]
+Data2$age <- DataID -dateID[which(Data2$event == 'birth')]
+DateID <- sapply(dayID, as.Date, format= "%Y-%m-%d", origin= "2019-04-18")
+Data2$age <- dataID -dateID[which(Data2$event == 'birth')]
+Cyrus2 <- Data2
+Cyrus3 <-Cyrus2[order(Cyrus2$age)]
+Cyrus3 <-Cyrus2[order(Cyrus2$age),]
+CyrusMasskilo <-which(Cyrus3$event=='trait_mass')
+CyrusMassKiloGrams <- CyrusMasskilo/1000
+points(Cyrus3$age[cyrusMass], CyrusMassKiloGrams, pch=8, col="deeppurple")
+Data1 &lt;- read.csv(&#39;https://jonsmitchell.com/data/beren.csv&#39;, stringsAsFactors=F)#
+Data2 &lt;- read.csv(&#39;https://jonsmitchell.com/data/cyrus.csv&#39;, stringsAsFactors=F)#
+write.csv(Data1, &#39;rawdata.csv&#39;, quote=F)#
+length(Data1)#
+nrow(Data1)#
+ncol(Data1)#
+colnames(Data1)#
+head(Data1)#
+Data1[1,]#
+Data1[2,]#
+Data1[1:3,]#
+Data1[1:3, 4]#
+Data1[1:5, 1:3]#
+Feeds &lt;-(Data1[,9]==&#39;bottle&#39;)#
+berenMilk &lt;- Data1[Feeds,]#
+head(berenMilk)#
+Feeds &lt;- which(Data1$event == &#39;bottle&#39;)#
+Feeds &lt;- which(Data1$event == &#39;bottle&#39;)#
+dayID &lt;- apply(Data1, 1, function(x) paste(x[1:3], collapse=&#39;-&#39;))#
+dateID &lt;- sapply(dayID, as.Date, format = &quot;%Y-%m-%d&quot;, origin = &quot;2019-04-18&quot;)#
+Data1$age &lt;- dateID - dateID[which(Data1$event == &#39;birth&#39;)]#
+head(Data1)#
+beren2 &lt;- Data1#
+beren3 &lt;- beren2[order(beren2$age),]#
+write.csv(beren3, &#39;beren_new.csv&#39;, quote=F, row.names=FALSE)#
+Feeds &lt;- which(beren3$event == &quot;bottle&quot;)#
+avgMilk &lt;- mean(beren3$value[Feeds])#
+avgFeed &lt;- tapply(beren3$value[Feeds], beren3$age[Feeds], mean)#
+avgFeed#
+varFeed &lt;- tapply(beren3$value[Feeds], beren3$age[Feeds], var)#
+totalFeed &lt;- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
+numFeeds &lt;- tapply(beren3$value[Feeds] , beren3$age[Feeds], length)#
+cor(beren3$value[Feeds], beren3$age[Feeds])#
+cor.test(beren3$value[Feeds], beren3$age[Feeds])#
+berenCor &lt;- cor.test(beren3$value[Feeds], beren3$age[Feeds])#
+summary(berenCor)#
+berenANOVA &lt;- aov(beren3$value[Feeds] ~ beren3$caregiver[Feeds])#
+boxplot( beren3$value[Feeds] ~ beren3$caregiver[Feeds], xlab= &quot;who gave the bottle&quot;, ylab=#
+&quot;amount of milk consumed (oz)&quot;)#
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalFeed)), totalFeed, type=&quot;b&quot;, pch=16, xlab=&quot;age in days&quot;,#
+ylab=&quot;ounces of milk&quot;)#
+abline(h=mean(totalFeed), lty=2, col= &#39;red&#39;)#
+#
+pdf(&quot;r02b-totalMilkByDay.pdf&quot;, height=4, width=4)#
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5,0), tck=-0.01)#
+plot(as.numeric(names(totalFeed)), totalFeed, type=&quot;b&quot;, pch=16, xlab=&quot;age in days&quot;,#
+ylab=&quot;ounces of milk&quot;)#
+abline(h=mean(totalFeed), lty=2, col=&#39;red&#39;)#
+dev.off()
