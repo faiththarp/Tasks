@@ -118,8 +118,12 @@ Data2$age <- dateID -dateID[which(Data2$event == 'birth')]
 Cyrus2 <- Data2
 Cyrus3 <-Cyrus2[order(Cyrus2$age),]
 
+pdf("r02b-totalMilkByDay.pdf", height= 4, width=4)
 par(las=1, mar=c(5,5,1,1), mgp=c(2,0.5,0),tck=-0.01)
 plot(berenMass$age, berenMass$value, type="b", pch=16, xlabs="age in days", ylabs="mass in kg", ylim=c(4,18))
 points(Cyrus3$age, Cyrus3$value / 1000, pch=16, col="blue")
+abline(h=mean(totalFeed), lty=2, col='red')
+dev.off()
+
 
 
