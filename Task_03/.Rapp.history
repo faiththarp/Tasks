@@ -1,0 +1,73 @@
+library(swirl)swirl()
+5+7
+x <- 5 + 7
+x
+y
+x-3
+<-x-3
+x-3
+y<-x-3
+y
+c(1.1,9,3.14)
+(1.1, 9, 3.14)
+z <- c(1.1, 9, 3.14)
+?c
+z
+c(555 z)
+c(z, 555)
+c(z, 555, z)
+z * 2 + 100
+my_sqrt
+my_sqrt(z-1)
+z-1
+sqrt(z-1)
+info()
+sqrt(z-1)
+sqrt(my_sqrt-1)
+c(my_sqrt)
+skip()
+my_sqrt
+my_div
+skip()
+my_div
+C(1,2,3,4)+c(0,10)
+c(1,2,3,4)+ c(0,10)
+c(1, 2, 3, 4) + c(0, 10, 100)
+z * 2 + 1000
+my_div
+cyrus2 &lt;- Data2#
+cyrus3 &lt;- cyrus2[order(cyrus2$age),]#
+cMass &lt;-which(cyrus3$event == &#39;trait_mass&#39;)#
+avgcMass &lt;-mean(cyrus3$value[cMass])#
+avgcMass &lt;- tapply(cyrus3$value[cMass], cyrus3$age[cMass], mean)#
+varcMass &lt;- tapply(cyrus3$value[cMass], cyrus3$age[cMass], var)#
+totalcMass &lt;- tapply(cyrus3$value[cMass], cyrus3$age[cMass],sum)#
+numcMass &lt;- tapply(cyrus3$value[cMass], cyrus3$age[cMass], length)#
+cor(cyrus3$value[cMass], cyrus3$age[cMass])#
+cor.test(cyrus3$value[cMass], cyrus3$age[cMass])#
+cyrusCor &lt;- cor.test(cyrus3$value[cMass], cyrus3$age[cMass])#
+summary(cyrusCor)#
+cyrusANOVA &lt;- aov(cyrus3$value[cMass] ~ cyrus3$age[cMass])#
+boxplot(cyrus3$value[cMass] ~ cyrus3$age[cMass], xlab= &quot;age(days)&quot;, ylab= &quot;mass(g)&quot;)#
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalcMass)), totalcMass, type=&#39;b&#39;, pch=16, xlab=&quot;age in days&quot;,#
+ylab=&quot;mass in grams&quot;)#
+abline(h=mean(totalcMass), lty=2, col=&#39;purple&#39;)#
+pdf(&quot;r02b-totalMassByDayCyrus.pdf&quot;, height=4, width=4)#
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalcMass)), totalcMass, type=&quot;b&quot;, pch=16, xlab=&quot;age in days&quot;,#
+ylab=&quot;mass in grams&quot;)#
+title(&quot;Cyrus Age vs Mass&quot;, xlab=&quot;age in days&quot;, ylab=&quot;mass in grams&quot;)#
+abline(h=mean(totalcMass), lty=2, col=&#39;purple&#39;)
+boxplot( beren3$value[Mass] ~ beren3$age[Mass], xlab= &quot;age(days)&quot;, ylab= &quot;mass(kg)&quot;)#
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)#
+plot(as.numeric(names(totalMass)), totalMass, type=&quot;b&quot;, pch=16, xlab=&quot;age in days&quot;,#
+ylab=&quot;mass in kg&quot;, ylim=c(0,20), col=&#39;green&#39;)#
+points(cyrus3$age[cMass], cyrus3$value[cMass]/1000, pch=16, col=&#39;purple&#39;)#
+title(&quot;Beren and Cyrus Age vs Mass&quot;)#
+legend(1000, 6, legend=c(&quot;Beren&quot;, &quot;Cyrus&quot;), col=c(&quot;green&quot;,&quot;purple&quot;), lty=2:2, cex=0.8,#
+title=&quot;Children&quot;, text.font=4)#
+dev.off()
+setwd(~/Desktop/Evolution/Task.03)
+setwd('~/Desktop/Evolution/Task.03')
+setwd('~/Desktop/Evolution/Tasks/Task_03')
